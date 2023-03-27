@@ -2,7 +2,6 @@
 
 - tips:
   mason default keymaps:
-
 ```
  keymaps = {
                 -- Keymap to expand a package
