@@ -11,16 +11,16 @@ if not cmp_nvim_lsp_status then
 end
 
 -- import typescript plugin safely
-local typescript_setup, typescript = pcall(require, "typescript")
-if not typescript_setup then
-	return
-end
+-- local typescript_setup, typescript = pcall(require, "typescript")
+-- if not typescript_setup then
+-- return
+-- end
 
 -- import rust-tools plugin safely
-local rust_setup, rt = pcall(require, "rust-tools")
-if not rust_setup then
-	return
-end
+-- local rust_setup, rt = pcall(require, "rust-tools")
+-- if not rust_setup then
+-- return
+-- end
 
 local keymap = vim.keymap -- for conciseness
 
@@ -64,20 +64,20 @@ for type, icon in pairs(signs) do
 end
 
 -- configure typescript server with plugin
-typescript.setup({
-	server = {
-		capabilities = capabilities,
-		on_attach = on_attach,
-	},
-})
+-- typescript.setup({
+-- server = {
+-- capabilities = capabilities,
+-- on_attach = on_attach,
+-- },
+-- })
 
 -- configure rust server with plugin
-rt.setup({
-	server = {
-		capabilities = capabilities,
-		on_attach = on_attach,
-	},
-})
+-- rt.setup({
+-- server = {
+-- capabilities = capabilities,
+-- on_attach = on_attach,
+-- },
+-- })
 
 -- configure cpp clangd
 lspconfig["clangd"].setup({
